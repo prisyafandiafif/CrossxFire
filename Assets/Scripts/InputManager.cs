@@ -156,6 +156,12 @@ public class InputManager : MonoBehaviour
 				#endregion
 			}
 
+			Vector3 newCameraPosition2 = new Vector3(selectedUnit.associatedGameObject.transform.position.x, 0.45f, selectedUnit.associatedGameObject.transform.position.z - 2.5027f);
+			Vector3 newCameraRotation2 = new Vector3(45f, 0f, 0f);
+
+			//rotate and move the camera to the target unit
+			yield return StartCoroutine(GameManager.instance.FocusCameraToAPosition(newCameraPosition2, newCameraRotation2));
+
 			//deselect unit
 			UnitManager.instance.DeselectUnit(selectedUnit);
 
@@ -216,6 +222,12 @@ public class InputManager : MonoBehaviour
 				//call reset for rotation function
 				TileDotManager.instance.ResetForRotation();
 
+				Vector3 newCameraPosition = new Vector3(selectedUnit.associatedGameObject.transform.position.x, 0.45f, selectedUnit.associatedGameObject.transform.position.z - 2.5027f);
+				Vector3 newCameraRotation = new Vector3(45f, 0f, 0f);
+
+				//rotate and move the camera to the target unit
+				yield return StartCoroutine(GameManager.instance.FocusCameraToAPosition(newCameraPosition, newCameraRotation));
+
 				if (GameManager.instance.uiType == 2)
 				{
 					//set selector to normal status again
@@ -250,6 +262,12 @@ public class InputManager : MonoBehaviour
 
 			yield return StartCoroutine(UnitManager.instance.GiveNormalActionPoints(Mathf.Abs(1), selectedUnit));
 		}
+
+		Vector3 newCameraPosition = new Vector3(selectedUnit.associatedGameObject.transform.position.x, 0.45f, selectedUnit.associatedGameObject.transform.position.z + 2.5027f);
+		Vector3 newCameraRotation = new Vector3(45f, 180f, 0f);
+
+		//rotate and move the camera to the target unit
+		yield return StartCoroutine(GameManager.instance.FocusCameraToAPosition(newCameraPosition, newCameraRotation));
 
 		//check if there are enemies in attack range
 		List<int> attackedToBeUnitOrBuilding = new List<int>();
@@ -470,7 +488,7 @@ public class InputManager : MonoBehaviour
 							}
 						}
 						else
-						//if it's in Rotation Mode
+						//if it's in Movement Mode
 						if (GameManager.instance.GetSelectorStatus(cursorToCheck) == 1)
 						{
 							int selectedUnitID = UnitManager.instance.SearchUnitIDBySelectedUnit();
@@ -497,13 +515,7 @@ public class InputManager : MonoBehaviour
 			
 							}
 						}
-						else
-						//if it's in Movement mode
-						if (GameManager.instance.GetSelectorStatus(cursorToCheck) == 3) //move buitton on action options window
-						{
-
-						}
-						//if Unit is not showing Attack or Rotate or Stay Text or not in Attack Mode or not in Rotation Mode
+						//if Unit is not showing Attack or Rotate or Stay Text or not in Attack Mode or not in Movement Mode
 						else 
 						{
 							//if there's already a Unit that has been selected

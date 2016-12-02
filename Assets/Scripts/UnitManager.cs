@@ -145,7 +145,7 @@ public class UnitManager : MonoBehaviour
 					toPutUnit.healthPoint = 1;
 					toPutUnit.fullHealthPoint = toPutUnit.healthPoint;
 					toPutUnit.damagePoint = 1;
-					toPutUnit.rotationPoint = 3;
+					toPutUnit.rotationPoint = 2;
 					toPutUnit.fullRotationPoint = toPutUnit.rotationPoint;
 					toPutUnit.stamina = 0;
 					//toPutUnit.initYPosition = toPutUnit.associatedGameObject.transform.position.y;
@@ -163,7 +163,7 @@ public class UnitManager : MonoBehaviour
 					toPutUnit.healthPoint = 1;
 					toPutUnit.fullHealthPoint = toPutUnit.healthPoint;
 					toPutUnit.damagePoint = 1;
-					toPutUnit.rotationPoint = 3;
+					toPutUnit.rotationPoint = 2;
 					toPutUnit.fullRotationPoint = toPutUnit.rotationPoint;
 					toPutUnit.stamina = 0;
 					//toPutUnit.initYPosition = toPutUnit.associatedGameObject.transform.position.y;
@@ -3180,77 +3180,107 @@ public class UnitManager : MonoBehaviour
 		{
 			//yield return new WaitForSeconds(0.5f);
 
-			HOTween.To
-			(
-				unitToKill.associatedGameObject.transform.GetChild(0).gameObject.transform, 
-				0.9f, 
-				new TweenParms()
-			        .Prop
-					(
-						"localScale", 
-						unitToKill.associatedGameObject.transform.GetChild(0).gameObject.transform.localScale*0.83f,
-						false	
-					) 
-			        .Ease(EaseType.EaseInBack)
-					.Delay(0)
-			);
-
-			HOTween.To
-			(
-				unitToKill.associatedGameObject.transform.GetChild(1).gameObject.transform, 
-				0.9f, 
-				new TweenParms()
-			        .Prop
-					(
-						"localScale", 
-						unitToKill.associatedGameObject.transform.GetChild(1).gameObject.transform.localScale*0.83f,
-						false	
-					) 
-			        .Ease(EaseType.EaseInBack)
-					.Delay(0)
-			);
-	
-			HOTween.To
-			(
-				unitToKill.associatedGameObject.transform.GetChild(7).gameObject.transform, 
-				0.9f, 
-				new TweenParms()
-			        .Prop
-					(
-						"localScale", 
-						unitToKill.associatedGameObject.transform.GetChild(7).gameObject.transform.localScale*0.83f,
-						false	
-					) 
-			        .Ease(EaseType.EaseInBack)
-					.Delay(0)
-			);
-	
-			yield return new WaitForSeconds(1f);
-
-			/*HOTween.To
-			(
-				unitToKill.associatedGameObject.transform, 
-				0.5f, 
-				new TweenParms()
-			        .Prop
-					(
-						"position", 
-						new Vector3
-						(
-							0f,
-							0.65f,
-							0f
-						),
-						true	
-					) 
-			        .Ease(EaseType.EaseOutBack)
-					.Delay(0f)
-			);
-
-			yield return new WaitForSeconds(0.5f);*/
-
-			if (GameManager.instance.turnID == 1)
+			if (unitToKill.unitID != 2)
 			{
+				HOTween.To
+				(
+					unitToKill.associatedGameObject.transform.GetChild(0).gameObject.transform, 
+					0.9f, 
+					new TweenParms()
+				        .Prop
+						(
+							"localScale", 
+							unitToKill.associatedGameObject.transform.GetChild(0).gameObject.transform.localScale*0.83f,
+							false	
+						) 
+				        .Ease(EaseType.EaseInBack)
+						.Delay(0)
+				);
+	
+				HOTween.To
+				(
+					unitToKill.associatedGameObject.transform.GetChild(1).gameObject.transform, 
+					0.9f, 
+					new TweenParms()
+				        .Prop
+						(
+							"localScale", 
+							unitToKill.associatedGameObject.transform.GetChild(1).gameObject.transform.localScale*0.83f,
+							false	
+						) 
+				        .Ease(EaseType.EaseInBack)
+						.Delay(0)
+				);
+		
+				HOTween.To
+				(
+					unitToKill.associatedGameObject.transform.GetChild(7).gameObject.transform, 
+					0.9f, 
+					new TweenParms()
+				        .Prop
+						(
+							"localScale", 
+							unitToKill.associatedGameObject.transform.GetChild(7).gameObject.transform.localScale*0.83f,
+							false	
+						) 
+				        .Ease(EaseType.EaseInBack)
+						.Delay(0)
+				);
+		
+				yield return new WaitForSeconds(1f);
+	
+				if (GameManager.instance.turnID == 1)
+				{
+					HOTween.To
+					(
+						unitToKill.associatedGameObject.transform, 
+						0.5f, 
+						new TweenParms()
+					        .Prop
+							(
+								"position", 
+								new Vector3
+								(
+									Camera.main.transform.position.x - (2.52f - (0.3f * unitToKill.unitID)),
+									Camera.main.transform.position.y - 1f,
+									Camera.main.transform.position.z + 3.21f
+									/*2.2f,
+									-0.31f,
+									0.15f*/
+								),
+								false	
+							) 
+					        .Ease(EaseType.Linear)
+							.Delay(0f)
+					);
+				}
+				else
+				if (GameManager.instance.turnID == 2)
+				{
+					HOTween.To
+					(
+						unitToKill.associatedGameObject.transform, 
+						0.5f, 
+						new TweenParms()
+					        .Prop
+							(
+								"position", 
+								new Vector3
+								(
+									Camera.main.transform.position.x + (2.52f - (0.3f * unitToKill.unitID)),
+									Camera.main.transform.position.y - 1f,
+									Camera.main.transform.position.z - 3.21f
+									/*2.2f,
+									-0.31f,
+									0.15f*/
+								),
+								false	
+							) 
+					        .Ease(EaseType.Linear)
+							.Delay(0f)
+					);
+				}
+				
 				HOTween.To
 				(
 					unitToKill.associatedGameObject.transform, 
@@ -3258,73 +3288,74 @@ public class UnitManager : MonoBehaviour
 					new TweenParms()
 				        .Prop
 						(
-							"position", 
+							"eulerAngles", 
 							new Vector3
 							(
-								Camera.main.transform.position.x - (2.52f - (0.3f * unitToKill.unitID)),
-								Camera.main.transform.position.y - 1f,
-								Camera.main.transform.position.z + 3.21f
-								/*2.2f,
-								-0.31f,
-								0.15f*/
+								26f,
+								61.88f,
+								0f
 							),
 							false	
 						) 
-				        .Ease(EaseType.Linear)
+				        .Ease(EaseType.EaseInBack)
 						.Delay(0f)
 				);
+
+				yield return new WaitForSeconds(0.5f);
+
+				//if the attacked unit is player's unit
+				GameManager.instance.specialPoints[unitToKill.unitID] += 1;
 			}
+			//if it's player's base
 			else
-			if (GameManager.instance.turnID == 2)
 			{
 				HOTween.To
 				(
-					unitToKill.associatedGameObject.transform, 
-					0.5f, 
+					unitToKill.associatedGameObject.transform.GetChild(0).gameObject.transform, 
+					0.9f, 
 					new TweenParms()
 				        .Prop
 						(
-							"position", 
-							new Vector3
-							(
-								Camera.main.transform.position.x + (2.52f - (0.3f * unitToKill.unitID)),
-								Camera.main.transform.position.y - 1f,
-								Camera.main.transform.position.z - 3.21f
-								/*2.2f,
-								-0.31f,
-								0.15f*/
-							),
+							"localScale", 
+							unitToKill.associatedGameObject.transform.GetChild(0).gameObject.transform.localScale*0f,
 							false	
 						) 
-				        .Ease(EaseType.Linear)
-						.Delay(0f)
+				        .Ease(EaseType.EaseInBack)
+						.Delay(0)
 				);
-			}
-			
-			HOTween.To
-			(
-				unitToKill.associatedGameObject.transform, 
-				0.5f, 
-				new TweenParms()
-			        .Prop
-					(
-						"eulerAngles", 
-						new Vector3
+	
+				HOTween.To
+				(
+					unitToKill.associatedGameObject.transform.GetChild(1).gameObject.transform, 
+					0.9f, 
+					new TweenParms()
+				        .Prop
 						(
-							26f,
-							61.88f,
-							0f
-						),
-						false	
-					) 
-			        .Ease(EaseType.EaseInBack)
-					.Delay(0f)
-			);
-
-			yield return new WaitForSeconds(0.5f);
-
-			//if the attacked unit is player's unit
-			GameManager.instance.specialPoints[unitToKill.unitID] += 1;
+							"localScale", 
+							unitToKill.associatedGameObject.transform.GetChild(1).gameObject.transform.localScale*0f,
+							false	
+						) 
+				        .Ease(EaseType.EaseInBack)
+						.Delay(0)
+				);
+		
+				HOTween.To
+				(
+					unitToKill.associatedGameObject.transform.GetChild(7).gameObject.transform, 
+					0.9f, 
+					new TweenParms()
+				        .Prop
+						(
+							"localScale", 
+							unitToKill.associatedGameObject.transform.GetChild(7).gameObject.transform.localScale*0f,
+							false	
+						) 
+				        .Ease(EaseType.EaseInBack)
+						.Delay(0)
+				);
+		
+				yield return new WaitForSeconds(1f);
+			}
 
 			//refresh action points on UI
 			UIManager.instance.RefreshActionPointsAndSpecialPointsAndSouldPointsAndStaminaPointsUI();	
@@ -4155,7 +4186,7 @@ public class UnitManager : MonoBehaviour
 				yield return new WaitForSeconds(0.5f);
 
 				//reduce HP
-				unitOfPlayerToCheck.healthPoint -= unitOfPlayerToCheck.damagePoint;
+				unitOfPlayerToCheck.healthPoint -= unitToMove.damagePoint;
 	
 				//show damage -number animation
 				yield return StartCoroutine(UIManager.instance.ShowOtherText(unitOfPlayerToCheck, "-" + unitToMove.damagePoint + " HP", Color.red));
@@ -4166,22 +4197,53 @@ public class UnitManager : MonoBehaviour
 					//dead
 					Debug.Log("Stomped unit is dead!");
 				
-					//steal some action points based on how many soul points of the killing type enemy's unit has
-					if (GameManager.instance.soulPoints[unitToMove.unitID-100] > 0)
+					//if it's not player's base
+					if (unitOfPlayerToCheck.unitID != 2)
 					{
-						//soul theft
-						yield return StartCoroutine(UIManager.instance.ShowSoulTheftBumperAnimation());
-		
-						StartCoroutine(GiveNormalActionPoints(GameManager.instance.soulPoints[unitToMove.unitID-100], unitOfPlayerToCheck));
+						Debug.Log("K");
+
+						//steal some action points based on how many soul points of the killing type enemy's unit has
+						if (GameManager.instance.soulPoints[unitToMove.unitID-100] > 0)
+						{
+							//soul theft
+							yield return StartCoroutine(UIManager.instance.ShowSoulTheftBumperAnimation());
+			
+							StartCoroutine(GiveNormalActionPoints(GameManager.instance.soulPoints[unitToMove.unitID-100], unitOfPlayerToCheck));
+						}
+
+						//kill this unit
+						yield return StartCoroutine(KillAUnit(unitOfPlayerToCheck));
 					}
-					
-					//kill this unit
-					yield return StartCoroutine(KillAUnit(unitOfPlayerToCheck));
+					else
+					{
+						//kill this unit
+						yield return StartCoroutine(KillAUnit(unitOfPlayerToCheck));
+					}
 				}
 			}
 
 			//find if there are player's unit in its sight range
 			HidePlayerUnitsInEnemysTurn();
+		}
+
+		//if player's unit
+		if (unitToMove.unitID >= 0 && unitToMove.unitID < 100)
+		{
+			Vector3 newCameraPosition2 = new Vector3(unitToMove.associatedGameObject.transform.position.x, 0.45f, unitToMove.associatedGameObject.transform.position.z - 2.5027f);
+			Vector3 newCameraRotation2 = new Vector3(45f, 0f, 0f);
+			
+			//rotate and move the camera to the target unit
+			yield return StartCoroutine(GameManager.instance.FocusCameraToAPosition(newCameraPosition2, newCameraRotation2));
+		}
+		else
+		//if enemy's unit
+		if (unitToMove.unitID >= 100 && unitToMove.unitID < 200)
+		{
+			Vector3 newCameraPosition2 = new Vector3(unitToMove.associatedGameObject.transform.position.x, 0.45f, unitToMove.associatedGameObject.transform.position.z + 2.5027f);
+			Vector3 newCameraRotation2 = new Vector3(45f, 180f, 0f);
+			
+			//rotate and move the camera to the target unit
+			yield return StartCoroutine(GameManager.instance.FocusCameraToAPosition(newCameraPosition2, newCameraRotation2));
 		}
 
 		//check if there are enemies in attack range

@@ -1594,8 +1594,8 @@ public class GameManager : MonoBehaviour
 				//if go to the top left, left, or bottom left
 				if (direction == 0 || direction == 5 || direction == 4)
 				{
-					for (int i = 0; i < resurrectTracker.Count; i++)
-					{
+					//for (int i = 0; i < resurrectTracker.Count; i++)
+					//{
 						int idxInResurrectTracker = GameManager.instance.resurrectTracker.IndexOf(TileDotManager.instance.dots[TileDotManager.instance.SearchDotIDByPosition(cursorToMove.transform.position)]);
 
 						if (idxInResurrectTracker == 0)
@@ -1692,14 +1692,14 @@ public class GameManager : MonoBehaviour
 							//rotate and move the camera to the target unit
 							StartCoroutine(FocusCameraToAPosition(newCameraPosition, newCameraRotation, 0.25f));
 						}
-					}
+					//}
 				}
 				else
 				//if go to the top right, right, or bottom right
 				if (direction == 1 || direction == 2 || direction == 3)
 				{
-					for (int i = 0; i < resurrectTracker.Count; i++)
-					{
+					//for (int i = 0; i < resurrectTracker.Count; i++)
+					//{
 						int idxInResurrectTracker = GameManager.instance.resurrectTracker.IndexOf(TileDotManager.instance.dots[TileDotManager.instance.SearchDotIDByPosition(cursorToMove.transform.position)]);
 
 						if (idxInResurrectTracker == GameManager.instance.resurrectTracker.Count-1)
@@ -1751,6 +1751,8 @@ public class GameManager : MonoBehaviour
 						}
 						else
 						{
+							Debug.Log("Rewew");
+
 							//go to the dot on the prev index
 							HOTween.To
 							(
@@ -1796,7 +1798,7 @@ public class GameManager : MonoBehaviour
 							//rotate and move the camera to the target unit
 							StartCoroutine(FocusCameraToAPosition(newCameraPosition, newCameraRotation, 0.25f));
 						}
-					}
+					//}
 				}
 			}
 		}
