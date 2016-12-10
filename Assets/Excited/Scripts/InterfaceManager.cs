@@ -6,8 +6,8 @@ public class InterfaceManager : MonoBehaviour
 {
 	public static InterfaceManager instance;
 
-	public InputField cursorSpeedInputField;
-	public InputField snapTolerance;
+	//public InputField cursorSpeedInputField;
+	//public InputField snapTolerance;
 
 	// Use this for initialization
 	void Awake ()
