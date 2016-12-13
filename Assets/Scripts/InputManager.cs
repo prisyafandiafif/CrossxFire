@@ -330,6 +330,65 @@ public class InputManager : MonoBehaviour
 			Debug.Log(Input.GetJoystickNames()[i]);
 		}*/
 
+		//if X button is selected
+		if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+		{
+			if (!UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.activeSelf)
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.SetActive(true);
+			}
+
+			if (!UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.activeSelf)
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+			}
+			else
+			if (!UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(1).gameObject.activeSelf)
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(1).gameObject.SetActive(true);
+			}
+			else
+			if (!UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(2).gameObject.activeSelf)
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(2).gameObject.SetActive(true);
+			}
+			else
+			if (!UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(3).gameObject.activeSelf)
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(3).gameObject.SetActive(true);
+			}
+			else
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(1).gameObject.SetActive(false);
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(2).gameObject.SetActive(false);
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(3).gameObject.SetActive(false);
+			}
+		}
+
+		//if Bbutton is selected
+		if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+		{
+			if (UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.activeSelf)
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.SetActive(false);
+			}
+		}
+
+		//if Y button is selected
+		if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+		{
+			//pause the game
+			if (Time.timeScale < 0.1f)
+			{
+				Time.timeScale = 1f;
+			}
+			else
+			{
+				Time.timeScale = 0f;
+			}
+		}
+
 		//not checking the controller input when there is a canvas world activated
 		if (UIManager.instance.IsThereACanvasWorldActive())
 		{

@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
 
 	void Start () 
 	{
-		StartCoroutine(SwitchTurn(2));
+		//StartCoroutine(SwitchTurn(2));
 	}
 	
 	// Update is called once per frame
