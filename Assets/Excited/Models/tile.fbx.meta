@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 895c2cd0ef8c01448afce5011e635a03
-timeCreated: 1480697727
+guid: eae562674d6a8844696e043f0537a621
+timeCreated: 1481763016
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCylinder1
+    4300000: tile:headusOBJexport
     9500000: //RootNode
   materials:
     importMaterials: 1

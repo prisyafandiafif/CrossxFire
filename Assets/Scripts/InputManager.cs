@@ -330,6 +330,19 @@ public class InputManager : MonoBehaviour
 			Debug.Log(Input.GetJoystickNames()[i]);
 		}*/
 
+		//if Right or Left Trigger is pressed
+		if (Input.GetAxis("Triggers") > 0.3f)
+		{
+			UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().color = new Color(1f, 0f, 0f, 1f);
+		}
+		else
+		{
+			if (UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.activeSelf)
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+			}
+		}
+		
 		//if X button is selected
 		if (Input.GetKeyDown(KeyCode.Joystick1Button2))
 		{
@@ -337,10 +350,14 @@ public class InputManager : MonoBehaviour
 			{
 				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.SetActive(true);
 			}
-
+			
 			if (!UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.activeSelf)
 			{
 				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(1).gameObject.SetActive(false);
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(2).gameObject.SetActive(false);
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(3).gameObject.SetActive(false);
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(4).gameObject.SetActive(false);
 			}
 			else
 			if (!UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(1).gameObject.activeSelf)
@@ -358,20 +375,31 @@ public class InputManager : MonoBehaviour
 				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(3).gameObject.SetActive(true);
 			}
 			else
+			if (!UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(4).gameObject.activeSelf)
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(4).gameObject.SetActive(true);
+			}
+			else
 			{
 				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.SetActive(true);
 				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(1).gameObject.SetActive(false);
 				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(2).gameObject.SetActive(false);
 				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(3).gameObject.SetActive(false);
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(4).gameObject.SetActive(false);
 			}
 		}
 
-		//if Bbutton is selected
+		//if B button is selected
 		if (Input.GetKeyDown(KeyCode.Joystick1Button1))
 		{
 			if (UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.activeSelf)
 			{
 				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.SetActive(false);
+			}
+
+			for (int i = 0; i < UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.childCount; i++)
+			{
+				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(i).gameObject.GetComponent<RectTransform>().localScale = new Vector3(0.9f, 0.9f, 0.9f);
 			}
 		}
 

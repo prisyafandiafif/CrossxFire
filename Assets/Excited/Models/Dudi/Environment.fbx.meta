@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 309d314feed337e4bbc4e3c9f1bdde00
+timeCreated: 1483569590
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Camera
+    100002: crystal-1
+    100004: crystal-2
+    100006: //RootNode
+    100008: hexagon-1
+    100010: hexagon-2
+    100012: hexagon-3
+    100014: Plane.002
+    100016: Plane.005
+    100018: Plane.007
+    100020: Plane.011
+    100022: Plane.012
+    100024: river-1
+    100026: river-2
+    100028: rock-1
+    100030: rock-2
+    100032: rock-3
+    100034: temple-1
+    100036: temple-2
+    100038: terrain
+    100040: tile
+    100042: Untitled
+    400000: Camera
+    400002: crystal-1
+    400004: crystal-2
+    400006: //RootNode
+    400008: hexagon-1
+    400010: hexagon-2
+    400012: hexagon-3
+    400014: Plane.002
+    400016: Plane.005
+    400018: Plane.007
+    400020: Plane.011
+    400022: Plane.012
+    400024: river-1
+    400026: river-2
+    400028: rock-1
+    400030: rock-2
+    400032: rock-3
+    400034: temple-1
+    400036: temple-2
+    400038: terrain
+    400040: tile
+    400042: Untitled
+    2300000: crystal-1
+    2300002: crystal-2
+    2300004: hexagon-1
+    2300006: hexagon-2
+    2300008: hexagon-3
+    2300010: Plane.002
+    2300012: Plane.005
+    2300014: Plane.007
+    2300016: Plane.011
+    2300018: Plane.012
+    2300020: river-1
+    2300022: river-2
+    2300024: rock-1
+    2300026: rock-2
+    2300028: rock-3
+    2300030: temple-1
+    2300032: temple-2
+    2300034: terrain
+    2300036: tile
+    2300038: Untitled
+    3300000: crystal-1
+    3300002: crystal-2
+    3300004: hexagon-1
+    3300006: hexagon-2
+    3300008: hexagon-3
+    3300010: Plane.002
+    3300012: Plane.005
+    3300014: Plane.007
+    3300016: Plane.011
+    3300018: Plane.012
+    3300020: river-1
+    3300022: river-2
+    3300024: rock-1
+    3300026: rock-2
+    3300028: rock-3
+    3300030: temple-1
+    3300032: temple-2
+    3300034: terrain
+    3300036: tile
+    3300038: Untitled
+    4300000: tile
+    4300002: Untitled
+    4300004: rock-3
+    4300006: rock-1
+    4300008: rock-2
+    4300010: hexagon-3
+    4300012: temple-2
+    4300014: Plane.012
+    4300016: Plane.011
+    4300018: river-2
+    4300020: temple-1
+    4300022: hexagon-2
+    4300024: crystal-2
+    4300026: Plane.005
+    4300028: river-1
+    4300030: crystal-1
+    4300032: Plane.002
+    4300034: hexagon-1
+    4300036: Plane.007
+    4300038: terrain
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
