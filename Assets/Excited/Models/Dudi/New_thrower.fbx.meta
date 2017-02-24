@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 7c08c187d7bb7ab42a17681c44fdeb31
+timeCreated: 1484555880
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: Body_joint
+    100004: Canon
+    100006: Head
+    100008: Hidden_Face_joint
+    100010: L_arm
+    100012: L_arm_joint
+    100014: L_fist
+    100016: L_fist_joint
+    100018: L_foot
+    100020: L_foot_joint
+    100022: L_ground_joint
+    100024: L_hand
+    100026: L_hand_joint
+    100028: L_leg
+    100030: L_leg2
+    100032: L_middleLeg_joint
+    100034: L_pad
+    100036: L_pad_joint
+    100038: L_upperLeg_joint
+    100040: Mask
+    100042: //RootNode
+    100044: R_arm
+    100046: R_arm_joint
+    100048: R_fist
+    100050: R_fist_joint
+    100052: R_foot
+    100054: R_foot_joint
+    100056: R_ground_joint
+    100058: R_hand
+    100060: R_hand_joint
+    100062: R_leg
+    100064: R_leg2
+    100066: R_middleLeg_joint
+    100068: R_pad
+    100070: R_pad_joint
+    100072: R_upperLeg_joint
+    100074: Root
+    100076: UpperBody_joint
+    400000: Body
+    400002: Body_joint
+    400004: Canon
+    400006: Head
+    400008: Hidden_Face_joint
+    400010: L_arm
+    400012: L_arm_joint
+    400014: L_fist
+    400016: L_fist_joint
+    400018: L_foot
+    400020: L_foot_joint
+    400022: L_ground_joint
+    400024: L_hand
+    400026: L_hand_joint
+    400028: L_leg
+    400030: L_leg2
+    400032: L_middleLeg_joint
+    400034: L_pad
+    400036: L_pad_joint
+    400038: L_upperLeg_joint
+    400040: Mask
+    400042: //RootNode
+    400044: R_arm
+    400046: R_arm_joint
+    400048: R_fist
+    400050: R_fist_joint
+    400052: R_foot
+    400054: R_foot_joint
+    400056: R_ground_joint
+    400058: R_hand
+    400060: R_hand_joint
+    400062: R_leg
+    400064: R_leg2
+    400066: R_middleLeg_joint
+    400068: R_pad
+    400070: R_pad_joint
+    400072: R_upperLeg_joint
+    400074: Root
+    400076: UpperBody_joint
+    2300000: Body
+    2300002: Canon
+    2300004: Head
+    2300006: L_arm
+    2300008: L_fist
+    2300010: L_foot
+    2300012: L_hand
+    2300014: L_leg
+    2300016: L_leg2
+    2300018: L_pad
+    2300020: Mask
+    2300022: R_arm
+    2300024: R_fist
+    2300026: R_foot
+    2300028: R_hand
+    2300030: R_leg
+    2300032: R_leg2
+    2300034: R_pad
+    3300000: Body
+    3300002: Canon
+    3300004: Head
+    3300006: L_arm
+    3300008: L_fist
+    3300010: L_foot
+    3300012: L_hand
+    3300014: L_leg
+    3300016: L_leg2
+    3300018: L_pad
+    3300020: Mask
+    3300022: R_arm
+    3300024: R_fist
+    3300026: R_foot
+    3300028: R_hand
+    3300030: R_leg
+    3300032: R_leg2
+    3300034: R_pad
+    4300000: L_hand
+    4300002: L_fist
+    4300004: L_arm
+    4300006: L_pad
+    4300008: R_hand
+    4300010: R_fist
+    4300012: R_arm
+    4300014: R_pad
+    4300016: Head
+    4300018: Mask
+    4300020: Canon
+    4300022: R_foot
+    4300024: R_leg2
+    4300026: R_leg
+    4300028: L_foot
+    4300030: L_leg2
+    4300032: L_leg
+    4300034: Body
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

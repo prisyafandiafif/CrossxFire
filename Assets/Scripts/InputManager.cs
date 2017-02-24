@@ -337,10 +337,10 @@ public class InputManager : MonoBehaviour
 		}
 		else
 		{
-			if (UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.activeSelf)
+			/*if (UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.activeSelf)
 			{
 				UIManager.instance.uiCanvas.transform.GetChild(8).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
-			}
+			}*/
 		}
 		
 		//if X button is selected

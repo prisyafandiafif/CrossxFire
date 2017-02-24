@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: c2de7445343a92947ae1a4cbe5ea59ab
+timeCreated: 1485044466
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: body
+    100002: body 1
+    100004: L__leg1
+    100006: L_arm
+    100008: L_arm 1
+    100010: L_foot
+    100012: L_knee
+    100014: L_knee2
+    100016: L_leg
+    100018: L_leg2
+    100020: L_leg3
+    100022: L_leg4
+    100024: polySurface46
+    100026: polySurface57
+    100028: R_arm
+    100030: R_arm 1
+    100032: R_foot
+    100034: R_knee
+    100036: R_knee2
+    100038: R_leg
+    100040: R_leg1
+    100042: R_leg2
+    100044: R_leg3
+    100046: R_leg4
+    100048: Root
+    100050: //RootNode
+    100052: transform1
+    400000: body
+    400002: body 1
+    400004: L__leg1
+    400006: L_arm
+    400008: L_arm 1
+    400010: L_foot
+    400012: L_knee
+    400014: L_knee2
+    400016: L_leg
+    400018: L_leg2
+    400020: L_leg3
+    400022: L_leg4
+    400024: polySurface46
+    400026: polySurface57
+    400028: R_arm
+    400030: R_arm 1
+    400032: R_foot
+    400034: R_knee
+    400036: R_knee2
+    400038: R_leg
+    400040: R_leg1
+    400042: R_leg2
+    400044: R_leg3
+    400046: R_leg4
+    400048: Root
+    400050: //RootNode
+    400052: transform1
+    2300000: body 1
+    2300002: L__leg1
+    2300004: L_arm 1
+    2300006: L_leg2
+    2300008: L_leg3
+    2300010: L_leg4
+    2300012: polySurface57
+    2300014: R_arm 1
+    2300016: R_leg1
+    2300018: R_leg2
+    2300020: R_leg3
+    2300022: R_leg4
+    3300000: body 1
+    3300002: L__leg1
+    3300004: L_arm 1
+    3300006: L_leg2
+    3300008: L_leg3
+    3300010: L_leg4
+    3300012: polySurface57
+    3300014: R_arm 1
+    3300016: R_leg1
+    3300018: R_leg2
+    3300020: R_leg3
+    3300022: R_leg4
+    4300000: L_leg4
+    4300002: L_leg3
+    4300004: L_leg2
+    4300006: L__leg1
+    4300008: polySurface57
+    4300010: R_leg4
+    4300012: R_leg3
+    4300014: R_leg2
+    4300016: R_leg1
+    4300018: body
+    4300020: L_arm
+    4300022: R_arm
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
